@@ -8,9 +8,8 @@ const HomePage = () => {
     <div className="homePage">
       <div className="textContainer">
         <div className="wrapper">
-
           <h1 className="title">Find Real Estate & Get Your Dream Place</h1>
-          
+
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis
             totam asperiores et omnis dolores dolorum quasi, fuga sequi dolorem
