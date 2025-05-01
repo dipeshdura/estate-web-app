@@ -1,10 +1,21 @@
+@import "../../responsive.scss";
 .singlePage{
     display: flex;
     height: 100%;
+
+    @include md{
+        flex-direction: column;
+        overflow: scroll;
+    }
     .details{
         flex:3;
         height: 100%;
         overflow-y: scroll;
+        @include md{
+            flex:none;
+            height: max-content;
+            margin-bottom: 50px;
+        }
         //macos
         scrollbar-gutter: stable;
 
@@ -31,6 +42,9 @@
         }
         .wrapper{
             padding-right: 50px;
+            @include md{
+                padding-right: 10px;
+            }
             .info{
                 margin-top: 50px;
                 .top{
@@ -73,6 +87,9 @@
                         border-radius: 10px;
                         background-color: rgba(254,205,81,0.209);
                         font-weight: 600;
+                        @include sm{
+                            text-align: center;
+                        }
                         img{
                             width: 50px;
                             height: 50px;
@@ -95,6 +112,11 @@
         background-color: #fcf5f3;
         height: 100%;
         overflow-y: scroll;
+        @include md{
+            flex:none;
+            height: max-content;
+            margin-bottom: 50px;
+        }
         //macos
         scrollbar-gutter: stable;
 
@@ -124,7 +146,9 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
-
+            @include md{
+                padding-top: 10px;
+            }
             img{
                 width: 24px;
                 height: 24px;
@@ -147,9 +171,15 @@
                 .featureText{
                     span{
                         font-weight: bold;
+                        @include sm{
+                            font-size: 12px;
+                        }
                     }
                     p{
                         font-size: 14px;
+                        @include sm{
+                            font-size: 12px;
+                        }
                     }
                 }
             }
@@ -174,6 +204,9 @@
                 display: flex;
                 justify-content: space-between;
 
+                @include lg{
+                    font-size: 12px;
+                }
                 .size{
                     display: flex;
                     align-items: center;
