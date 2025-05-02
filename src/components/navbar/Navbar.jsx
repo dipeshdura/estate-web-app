@@ -16,23 +16,25 @@ const Navbar = () => {
             <img src={logo} alt={logo} />
             <span>DuraEstate</span>
           </a>
-          <a href="/">Home</a>
+          <Link to="/">Home</Link>
           <a href="/">About</a>
           <a href="/">Contact</a>
           <a href="/">Agents</a>
         </div>
         <div className="right">
           {user ? (
+            <>
             <div className="user">
             <img src={avatar} alt={avatar} />
             <span>John Doe</span>
             <Link className="profile" to={`/profile`}>
-            <div className="notification">3</div>
-            <span>
+            <span className="profile-text">
               Profile
               </span>
+            <div className="notification">3</div>
             </Link>
           </div>
+            </>
           ):(
             <>
             <a href="">Sign in</a>
